@@ -84,6 +84,7 @@ public:
         [](Devices const &a, Devices const &b) {
             return a.order < b.order; 
         });
+        if (devices.empty()) return false;
         auto it = devices.begin();
         PaStreamParameters inputParameters;
         inputParameters.device = it->index;
